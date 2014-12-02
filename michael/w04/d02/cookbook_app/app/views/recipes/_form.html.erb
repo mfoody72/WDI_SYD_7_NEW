@@ -3,32 +3,37 @@
 <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-<div>
+</div>
 
   <div class="form-group">
     <%= f.label :course %><br>
     <%= f.text_field :course %>
-<div>
+</div>
 
 <div class="form-group">
-    <%= f.label :cooktime %><br>
+    <%= f.label :cooktime, 'Cook Time' %><br>
     <%= f.text_field :cooktime %>
-<div>
+</div>
 
 <div class="form-group">
-    <%= f.label :servingsize %><br>
+    <%= f.label :servingsize, 'Serving Size' %><br>
     <%= f.text_field :servingsize %>
-<div>
+</div>
   <div class="form-group">
     <%= f.label :instructions %><br>
     <%= f.text_field :instructions %>
-<div>
+</div>
 
   <div class="form-group">
     <%= f.label :image %><br>
     <%= f.url_field :image %>
-<div>
+</div>
+
+<div class="form-group">
+    <%= f.label :book_id %><br>
+    <%= f.collection_select :book_id, Book.all, :id, :title, prompt: "Choose Book" %>
+</div>
     <div class="form-group">
     <%= f.submit%>
-<div>
+</div>
   <% end %>

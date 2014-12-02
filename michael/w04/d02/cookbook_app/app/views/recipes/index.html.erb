@@ -1,5 +1,10 @@
-<h1>Recipes</h1>
+<h2>Recipes</h2>
+
+<p><%= link_to 'Add New Recipe', new_recipe_path %></p>
+
 <% @recipes.each do |recipe| %>
-<h3><%= link_to recipe.name, recipe %></h3>
-<p><%= recipe.course %></p>
+<div class="recipe">
+  <h3><%= recipe.name %></h3>
+  <p><%= recipe.course %> | <%= recipe.cooktime %></p>
+</div>
 <% end %>

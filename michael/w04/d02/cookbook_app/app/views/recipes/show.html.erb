@@ -1,9 +1,13 @@
 <h1><%= @recipe.name  %></h1>
+<h3>In Cookbook: <%= @recipe.book.title if @recipe.book %></h3>
+
 <%= image_tag @recipe.image %>
-<h5><%= @recipe.course %></h5>
-<h5><%= @recipe.cooktime %></h5>
-<h5><%= @recipe.servingsize %></h5>
-<h5><%= @recipe.instructions %></h5>
+<ul>
+<li>Course: <%= @recipe.course %></li>
+<li>Cook Time: <%= @recipe.cooktime %></li>
+<li>Serving Size: <%= @recipe.servingsize %></li>
+</ul>
+<p><%= @recipe.instructions %></p>
 
 
 </p>
