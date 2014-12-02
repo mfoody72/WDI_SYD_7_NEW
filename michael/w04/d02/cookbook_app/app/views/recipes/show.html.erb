@@ -1,0 +1,12 @@
+<h1><%= @recipe.name  %></h1>
+<%= image_tag @recipe.image %>
+<h5><%= @recipe.course %></h5>
+<h5><%= @recipe.cooktime %></h5>
+<h5><%= @recipe.servingsize %></h5>
+<h5><%= @recipe.instructions %></h5>
+
+
+</p>
+<h2><%= link_to "Edit", edit_recipe_path(@recipe) %></h2>
+<h2><%= link_to "Destroy", @recipe, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+<p>

@@ -1,0 +1,10 @@
+
+<h1><%= @book.title  %></h1>
+<h5><%= @book.chef %></h5>
+<%= image_tag @book.image %>
+<h5><%= @book.cuisine %></h5>
+
+</p>
+<h2><%= link_to "Edit", edit_book_path(@book) %></h2>
+<h2><%= link_to "Destroy", @book, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+<p>
