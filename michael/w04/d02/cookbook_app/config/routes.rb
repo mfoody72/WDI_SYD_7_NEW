@@ -30,6 +30,8 @@
 
 Rails.application.routes.draw do
  
+  get 'ingredients/index'
+
   get 'recipe/index'
 
   get 'books/index'

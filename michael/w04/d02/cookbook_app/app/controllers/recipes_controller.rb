@@ -44,7 +44,15 @@ private
   end
 
 def recipe_params
-  params.require(:recipe).permit(:name, :course, :cooktime, :servingsize, :instructions, :image, :book_id)
+  params.require(:recipe).permit(
+    :name, 
+    :course, 
+    :cooktime, 
+    :servingsize, 
+    :instructions, 
+    :image, 
+    :book_id,
+    { ingredient_ids:[] })
 end
 end
 

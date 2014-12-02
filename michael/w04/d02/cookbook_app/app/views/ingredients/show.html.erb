@@ -1,0 +1,11 @@
+
+
+<h1><%= @ingredient.name  %></h1>
+<h5><%= @ingredient.measurement %></h5>
+<h5><%= @ingredient.cost %></h5>
+<%= image_tag @ingredient.image %>
+
+<p>
+<h2><%= link_to "Edit", edit_ingredient_path(@ingredient) %></h2>
+<h2><%= link_to "Destroy", @ingredient, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+</p>

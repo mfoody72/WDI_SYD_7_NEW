@@ -15,6 +15,9 @@
 #
 
 class Recipe < ActiveRecord::Base
+  validates :name, presence: true
+  validates :course, presence: true
+  validates :image, presence: true
   belongs_to :book
   has_many :ingredients_recipes
   has_many :ingredients, through: :ingredients_recipes

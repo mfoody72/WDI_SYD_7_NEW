@@ -1,0 +1,10 @@
+<h2>Ingredient</h2>
+
+<p><%= link_to 'Add New Ingredient', new_ingredient_path %></p>
+
+<% @ingredients.each do |ingredient| %>
+<div class="ingredient">
+  <h3><%= ingredient.name %></h3>
+  <p><%= ingredient.measurement %> | <%= ingredient.cost %></p>
+</div>
+<% end %>
