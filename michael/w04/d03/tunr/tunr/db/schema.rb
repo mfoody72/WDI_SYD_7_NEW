@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203031609) do
+ActiveRecord::Schema.define(version: 20141203031902) do
 
   create_table "artists", force: true do |t|
     t.string   "name"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20141203031609) do
     t.string   "bio"
     t.string   "years_active"
     t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mixtape_songs", force: true do |t|
+    t.string   "song_id"
+    t.string   "mixtape_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
