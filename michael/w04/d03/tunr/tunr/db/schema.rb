@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141203004604) do
+ActiveRecord::Schema.define(version: 20141203031609) do
+
+  create_table "artists", force: true do |t|
+    t.string   "name"
+    t.string   "hometown"
+    t.string   "bio"
+    t.string   "years_active"
+    t.string   "label"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "mixtapes", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "songs", force: true do |t|
+    t.string   "name"
+    t.string   "year"
+    t.string   "genre"
+    t.string   "duration"
+    t.string   "artist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
