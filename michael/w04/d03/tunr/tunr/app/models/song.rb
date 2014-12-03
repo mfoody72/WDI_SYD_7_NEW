@@ -14,6 +14,6 @@
 
 class Song < ActiveRecord::Base
   belongs_to :artist
-  hhas_many :mixtape_songs
+  has_many :mixtape_songs
   has_many :songs, through: :mixtape_songs
 end
