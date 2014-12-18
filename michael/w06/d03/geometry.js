@@ -12,23 +12,25 @@ var rectangle = {
   width: 4
 };
 
-function Rectangle(length, width) {
-  this.length = length;
-  this.width = width;
-}
 
-Rectangle.prototype.isSquare = function() {
-    if (this.length == this.width)
+
+var isSquare = function (length, width) {
+    if length == width;
       return true;
     else
       return false;
     };
 
-Rectangle.prototype.area = function() {
-  return this.length * this.width;
+isSquare(4, 4)
+
+var areaBox = function (length, width) {
+  return length * width;
 };
-
-
+areaBox(4, 4)
+var perimeterBox = function (length, width) {
+    return length + length + width + width;
+};
+perimeterBox(4, 4, 4, 4)
 
 // Given the following a `triangle` object like the one below, write the following functions:
 
